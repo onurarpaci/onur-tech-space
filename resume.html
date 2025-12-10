@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onur Arpacı - Resume</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@400;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #ffffff;
+            padding: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .resume-header {
+            border-bottom: 3px solid #569cd6;
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 2.5rem;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+            letter-spacing: -1px;
+        }
+
+        .title {
+            font-size: 1.1rem;
+            color: #569cd6;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .contact-info a {
+            color: #569cd6;
+            text-decoration: none;
+        }
+
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.3rem;
+            color: #569cd6;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .experience-item,
+        .education-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.3rem;
+        }
+
+        .job-title {
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: #1a1a1a;
+        }
+
+        .company {
+            font-weight: 600;
+            color: #569cd6;
+            font-size: 0.95rem;
+        }
+
+        .period {
+            font-size: 0.85rem;
+            color: #666;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .description {
+            color: #444;
+            margin-top: 0.3rem;
+            font-size: 0.95rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .skill-category {
+            background: #f5f5f5;
+            padding: 1rem;
+            border-left: 3px solid #569cd6;
+        }
+
+        .skill-category h3 {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .skill-list {
+            list-style: none;
+            font-size: 0.85rem;
+            color: #444;
+        }
+
+        .skill-list li {
+            padding: 0.2rem 0;
+        }
+
+        .skill-list li:before {
+            content: "▸ ";
+            color: #569cd6;
+            font-weight: bold;
+        }
+
+        .cert-list,
+        .lang-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 0.5rem;
+        }
+
+        .cert-list li,
+        .lang-list li {
+            padding: 0.4rem 0;
+            font-size: 0.9rem;
+            color: #444;
+        }
+
+        .cert-list li:before {
+            content: "✓ ";
+            color: #10b981;
+            font-weight: bold;
+        }
+
+        .lang-list li {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .lang-name {
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .lang-level {
+            color: #666;
+            font-size: 0.85rem;
+        }
+
+        @media print {
+            body {
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .section {
+                page-break-inside: avoid;
+            }
+
+            h2 {
+                page-break-after: avoid;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="resume-header">
+        <h1>Onur Arpacı</h1>
+        <div class="title">Integration Developer | SQL | ETL | API/EDI Integration | BI</div>
+        <div class="contact-info">
+            <span>📍 Istanbul, Turkey</span>
+            <span>✉️ <a href="mailto:onur_arpaci@hotmail.com">onur_arpaci@hotmail.com</a></span>
+            <span>🔗 <a href="https://www.linkedin.com/in/onur-arpacı-20359578/" target="_blank">LinkedIn
+                    Profile</a></span>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Professional Summary</h2>
+        <p class="description">
+            Backend specialist optimizing data flow between SaaS platforms. 5+ years compiling solutions in SQL, API,
+            and EDI environments. Currently deploying integrations at Logiwa.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Professional Experience</h2>
+
+        <div class="experience-item">
+            <div class="job-header">
+                <div>
+                    <div class="job-title">Integration Developer</div>
+                    <div class="company">Logiwa</div>
+                </div>
+                <div class="period">Jan 2025 - Present</div>
+            </div>
+            <p class="description">Spearheading EDI and API integration strategies and managing electronic data
+                interchange flows for WMS.</p>
+        </div>
+
+        <div class="experience-item">
+            <div class="job-header">
+                <div>
+                    <div class="job-title">Report Developer</div>
+                    <div class="company">Logiwa</div>
+                </div>
+                <div class="period">Dec 2022 - Jan 2025</div>
+            </div>
+            <p class="description">Developed and delivered custom reports by translating complex client requirements
+                into actionable solutions.</p>
+        </div>
+
+        <div class="experience-item">
+            <div class="job-header">
+                <div>
+                    <div class="job-title">Reporting Analyst</div>
+                    <div class="company">Comdata Türkiye</div>
+                </div>
+                <div class="period">Apr 2019 - Nov 2022</div>
+            </div>
+            <p class="description">Built and maintained automated reports for management and customers using Power BI
+                and Google Data Studio.</p>
+        </div>
+
+        <div class="experience-item">
+            <div class="job-header">
+                <div>
+                    <div class="job-title">Foreigner Customer Relationship Management</div>
+                    <div class="company">Comdata Turkey</div>
+                </div>
+                <div class="period">Nov 2017 - Apr 2019</div>
+            </div>
+            <p class="description">Managed foreign customer relationships, solved CRM tickets, and handled backoffice
+                operations.</p>
+        </div>
+
+        <div class="experience-item">
+            <div class="job-header">
+                <div>
+                    <div class="job-title">Operations Support Specialist</div>
+                    <div class="company">METRO/MAKRO Cash and Carry</div>
+                </div>
+                <div class="period">Feb 2015 - Oct 2016</div>
+            </div>
+            <p class="description">Provided operational support and management for store processes.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Database & ETL</h3>
+                <ul class="skill-list">
+                    <li>SQL</li>
+                    <li>MongoDB</li>
+                    <li>PostgreSQL</li>
+                    <li>SSIS</li>
+                    <li>ETL</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Connectivity</h3>
+                <ul class="skill-list">
+                    <li>API</li>
+                    <li>REST</li>
+                    <li>SOAP</li>
+                    <li>EDI</li>
+                    <li>System Integration</li>
+                    <li>Data Mapping</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Visualization</h3>
+                <ul class="skill-list">
+                    <li>Power BI</li>
+                    <li>Looker Studio</li>
+                    <li>Business Intelligence</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Certifications</h2>
+        <ul class="cert-list">
+            <li>SQL Server Integration Services</li>
+            <li>MongoDB for SQL Experts</li>
+            <li>Intermediate PostgreSQL for Data Scientists</li>
+            <li>MongoDB for SQL Professionals</li>
+            <li>Statistics Foundations 2: Probability</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Languages</h2>
+        <ul class="lang-list">
+            <li>
+                <span class="lang-name">Turkish</span>
+                <span class="lang-level">Native or Bilingual</span>
+            </li>
+            <li>
+                <span class="lang-name">English</span>
+                <span class="lang-level">Full Professional</span>
+            </li>
+            <li>
+                <span class="lang-name">German</span>
+                <span class="lang-level">Limited Working</span>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
