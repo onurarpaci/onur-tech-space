@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link, NavLink } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Link, NavLink } from 'react-router-dom';
 import './styles/variables.css';
 import './App.css';
 import Hero from './components/Hero';
