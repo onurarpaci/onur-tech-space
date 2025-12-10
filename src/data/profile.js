@@ -4,7 +4,7 @@ export const profile = {
     role: "Integration Developer",
     // Coder Version Summary
     summary: "Backend specialist optimizing data flow between SaaS platforms. 5+ years compiling solutions in SQL, API, and EDI environments. Currently deploying integrations at Logiwa.",
-    location: "Istanbul, Turkey",
+    location: "Samsun, Turkey",
     experience: [
         {
             id: 1,
