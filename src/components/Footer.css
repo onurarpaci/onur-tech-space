@@ -1,0 +1,77 @@
+.debug-console {
+    background: #000;
+    color: #cccccc;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem 2rem 3rem 2rem;
+    border-top: 2px solid var(--primary);
+    margin-top: auto;
+    position: relative;
+    width: 100%;
+}
+
+.console-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.console-header {
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.console-row {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.key {
+    color: var(--primary);
+}
+
+.value {
+    color: var(--text-primary);
+}
+
+.prompt {
+    color: #10b981;
+    /* Terminal Green */
+}
+
+.cmd-link {
+    color: var(--text-accent);
+    text-decoration: none;
+}
+
+.cmd-link:hover {
+    text-decoration: underline;
+    color: var(--primary);
+}
+
+.console-bar-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #111;
+    padding: 0.2rem 1rem;
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #333;
+}
+
+@media (max-width: 768px) {
+    .debug-console {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding-bottom: 2rem;
+    }
+}

@@ -1,0 +1,188 @@
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  background: #111111;
+  /* Darker background for System Bar */
+  border-bottom: 2px solid var(--primary);
+  /* System Control Border */
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-content {
+  width: 100%;
+  max-width: var(--container-width);
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: var(--primary);
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-family: var(--font-mono);
+  letter-spacing: 0.5px;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+.nav-links a.active-link {
+  color: var(--primary);
+  text-shadow: 0 0 8px var(--primary-glow);
+}
+
+/* System Status Indicator */
+.system-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: #10b981;
+  /* Success Green */
+  border: 1px solid #10b981;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  background: rgba(16, 185, 129, 0.1);
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #10b981;
+  border-radius: 50%;
+  animation: blink 2s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+main {
+  flex: 1;
+  padding-top: var(--header-height);
+  padding-bottom: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section {
+  padding: 4rem 2rem;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer {
+  padding: 2rem;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  border-top: 1px solid var(--border-color);
+  margin-top: 4rem;
+}
+
+/* Global Animation Utilities */
+.fade-in {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.expand-width {
+  width: 0 !important;
+  transition: width 0.8s ease-in-out;
+}
+
+.expand-width.visible {
+  width: 100px !important;
+  /* Matches original divider width */
+}
+
+/* Helper for staggered delays */
+.delay-100 {
+  transition-delay: 100ms;
+}
+
+.delay-200 {
+  transition-delay: 200ms;
+}
+
+.delay-300 {
+  transition-delay: 300ms;
+}
+
+.delay-500 {
+  transition-delay: 500ms;
+}
+
+.delay-1000 {
+  transition-delay: 1000ms;
+}

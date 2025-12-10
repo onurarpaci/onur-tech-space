@@ -1,0 +1,65 @@
+/* Main Skills Grid Container - CENTERED on screen, left aligned items */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    /* Flow from left */
+    gap: 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Wrapper for sections */
+.doc-section-wrapper {
+    margin-bottom: 3rem;
+    max-width: 1000px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Align children left */
+}
+
+.doc-subtitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+    font-family: var(--font-main);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    width: 100%;
+    text-align: left;
+}
+
+/* Individual Skill Tag */
+.skill-tag {
+    background: #fff;
+    border: 1px solid var(--border-color);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-family: var(--font-mono);
+    font-weight: 500;
+    color: var(--primary);
+    transition: all 0.2s ease;
+    cursor: default;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    text-align: left;
+}
+
+.skill-tag:hover {
+    border-color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.lang-tag {
+    border-left: 3px solid var(--text-accent);
+}
+
+.cert-tag {
+    border-left: 3px solid #10b981;
+}

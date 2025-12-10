@@ -1,0 +1,250 @@
+/* Main Container */
+.xp-page-container {
+    padding: 0 2rem;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.xp-header-section {
+    margin-bottom: 3rem;
+    text-align: left;
+    width: 100%;
+}
+
+.xp-main-title {
+    font-size: 2.5rem;
+    color: var(--text-primary);
+    font-family: var(--font-mono);
+    margin-bottom: 0.5rem;
+}
+
+.xp-subtitle {
+    color: var(--text-secondary);
+    font-family: var(--font-mono);
+}
+
+.xp-divider-code {
+    font-family: var(--font-mono);
+    color: var(--primary);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* --- PIPELINE VISUALIZATION --- */
+.pipeline-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    padding: 2rem 0;
+    width: 100%;
+    gap: 2rem;
+}
+
+/* The Horizontal Line connecting nodes */
+.pipeline-track {
+    position: absolute;
+    top: 36px;
+    /* Align with dots */
+    left: 40px;
+    right: 40px;
+    height: 2px;
+    background: var(--text-secondary);
+    opacity: 0.3;
+    z-index: 0;
+}
+
+.pipeline-node {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Specific alignments */
+.connection-line-label {
+    position: absolute;
+    top: -25px;
+    /* Above the line */
+    left: 55%;
+    /* Offset to right of dot */
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--text-accent);
+    white-space: nowrap;
+}
+
+.node-marker {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.marker-dot {
+    width: 16px;
+    height: 16px;
+    background: #1a1a1a;
+    border: 2px solid var(--primary);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--primary-glow);
+}
+
+.node-3 .marker-dot {
+    background: var(--primary);
+    /* Active Node (Current) */
+    box-shadow: 0 0 15px var(--primary);
+}
+
+/* SERVER BOX Styling */
+.server-box {
+    background: #1a1a1a;
+    border: 1px solid var(--border-color);
+    border-top: 4px solid var(--text-secondary);
+    /* Default inactive */
+    padding: 1.5rem;
+    font-family: var(--font-mono);
+    position: relative;
+    transition: transform 0.2s ease;
+}
+
+.node-3 .server-box {
+    border-top-color: var(--primary);
+    /* Active Node */
+    border-color: var(--primary);
+    box-shadow: 0 4px 20px rgba(86, 156, 214, 0.1);
+}
+
+.server-box:hover {
+    transform: translateY(-5px);
+}
+
+.server-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 0.5rem;
+}
+
+.server-icon {
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+}
+
+.server-name {
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+.server-role {
+    color: var(--primary);
+    font-size: 1.1rem;
+    margin: 0 0 0.5rem 0;
+}
+
+.server-meta {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.server-desc {
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    line-height: 1.5;
+}
+
+/* --- INFRASTRUCTURE (SKILLS) GRID --- */
+.infra-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    width: 100%;
+}
+
+.infra-module {
+    background: #1a1a1a;
+    border: 1px solid var(--border-color);
+    padding: 0;
+}
+
+.module-header {
+    background: var(--bg-secondary);
+    padding: 0.8rem 1rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    font-family: var(--font-mono);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.module-icon {
+    color: var(--primary);
+}
+
+.module-title {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+}
+
+.module-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.infra-chip {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.chip-prefix {
+    color: var(--text-secondary);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .pipeline-container {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .pipeline-track {
+        width: 2px;
+        height: auto;
+        top: 40px;
+        bottom: 40px;
+        left: 27px;
+        /* Align with dots vertically */
+        right: auto;
+    }
+
+    .connection-line-label {
+        left: 30px;
+        top: 50%;
+    }
+
+    .node-marker {
+        margin-left: 20px;
+        /* Align dot */
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .infra-grid {
+        grid-template-columns: 1fr;
+    }
+}

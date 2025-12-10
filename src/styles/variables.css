@@ -1,0 +1,62 @@
+:root {
+    /* Colors - VS Code Dark+ Theme */
+    --bg-primary: #1e1e1e;
+    /* Editor Background */
+    --bg-secondary: #252526;
+    /* Sidebar/Card Background */
+    --bg-card: #252526;
+
+    --text-primary: #d4d4d4;
+    /* Default Text */
+    --text-secondary: #858585;
+    /* Comments/Subtitles */
+
+    /* Syntax Highlighting Accents */
+    --text-accent: #ce9178;
+    /* Strings (Orange/Red) */
+    --keyword: #569cd6;
+    /* Keywords (Blue) */
+    --function: #dcdcaa;
+    /* Functions (Yellow) */
+    --class-name: #4ec9b0;
+    /* Classes (Teal) */
+
+    --primary: #569cd6;
+    /* Primary Blue */
+    --primary-glow: rgba(86, 156, 214, 0.15);
+
+    --border-color: #333333;
+    /* Dark Border */
+
+    /* Typography */
+    --font-main: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+    /* Spacing */
+    --container-width: 1200px;
+    --header-height: 80px;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-main);
+    margin: 0;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+button {
+    cursor: pointer;
+    font-family: inherit;
+}
