@@ -49,7 +49,7 @@ const Hero = () => {
                     </div>
 
                     <div className={`hero-actions fade-in ${stage >= 2 ? 'visible' : ''}`} style={{ transitionDelay: '0.9s' }}>
-                        <a href="/resume.html" target="_blank" className="btn btn-primary">[ EXECUTE DOWNLOAD (RESUME.PDF) ]</a>
+                        <a href="./resume.html" target="_blank" className="btn btn-primary">[ EXECUTE DOWNLOAD (RESUME.PDF) ]</a>
                     </div>
                 </div>
 
